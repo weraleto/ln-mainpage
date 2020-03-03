@@ -41,7 +41,7 @@ gulp.task('svgSprite', function () {
             $('[stroke]').removeAttr('stroke');
             $('[style]').removeAttr('style');
           },
-          parserOptions: {xmlMode: true}
+        //   parserOptions: {xmlMode: true}
         }))
         .pipe(replace('&gt;', '>'))
         // в поле selector добавляем уникальный префикс который далее будет использован в пути к свг спрайту

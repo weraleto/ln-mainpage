@@ -1,4 +1,49 @@
 @import "variable";
+.main_header{
+    height: 100vh;
+    background: url('./../../img/images/main-header.jpg') no-repeat top center;
+    background-size: cover;
+    padding: $paddingH $paddingV;
+}
+.main_header-nav_wrapper{
+    min-height: 29.26%;
+}
+
+.main_header-nav{
+    display: flex;
+    justify-content: space-between;
+
+    color: $fillGray;
+}
+.main_header-nav-left, .main_header-nav-right{
+    display: flex;
+}
+
+.main_header-nav-left_item{
+    flex-basis: 190px;
+    flex-grow: 1;
+}
+
+.main_header-content {
+    height: 69.28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main_header-heading h1{
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+
+.main_header-subinfo{
+    margin-bottom: 20px;
+}
+
+.main_header-stamp{
+    margin-top: 3.14%;
+}
 
 @media all and (min-width: 320px) {
 
@@ -10,6 +55,6 @@
 }
 
 @media all and (min-width: 1280px) {
-
+    
 }
 
