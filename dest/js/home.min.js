@@ -5,8 +5,9 @@ $(document).ready(function () {
      $('.section-protect_item').css({'width':startWidth+'px'});
         $('.section-protect_item').css({'width' : startWidth-(startWidth*0.14)+'px'});
         let imgBlock=event.target.closest('.section-protect_item');
-        $(imgBlock).css({'width' : startWidth+(startWidth*0.14)*7+'px'}).find('.item-gallery_overlay').addClass('hide-overlay');
-        $(imgBlock).find('.item-gallery_intro').removeClass('hide-bl');
+        $(imgBlock).css({'width' : startWidth+(startWidth*0.14)*7+'px'})
+                    .find('.item-gallery_overlay').addClass('hide-overlay')
+                    .find('.item-gallery_intro').removeClass('hide-bl');
 
 
         let currId=imgBlock.id;
@@ -15,6 +16,7 @@ $(document).ready(function () {
         let canvas = $('#'+imgBlock.id+' canvas')[0].getContext('2d');
         canvas.width=100;
         canvas.height=100;
+        canvas.clearRect(0,0,100,100);
 
         let canvasImage= $(imgBlock).find('img')[0];
         let frames=1;
@@ -22,7 +24,7 @@ $(document).ready(function () {
         setInterval(()=>{
             drawImage (canvasImage.src,frames);
             frames++;
-        },100)
+        },150)
 
         
         function drawImage(img,num){
@@ -41,7 +43,6 @@ $(document).ready(function () {
             $('.item-gallery_overlay').removeClass('hide-overlay');
             $('.item-gallery_intro').addClass('hide-bl');
             $('canvas').css({'opacity':'0'});
-            canvas.clearRect(0,0,canvas.width+20,canvas.height);
         })
     })
     $('.section-protect_item').on('resize',(e)=>{
