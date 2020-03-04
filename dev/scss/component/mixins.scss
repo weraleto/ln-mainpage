@@ -47,3 +47,11 @@
   letter-spacing: 3.2px;
   font-weight: 500;
 }
+
+@mixin positionAbs {
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
