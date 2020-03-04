@@ -20,20 +20,22 @@
     font-size: 30px;
 }
 .section-choose {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     .section-heading {
-        max-width: 36.5%;
+        max-width: 416px;
         margin-bottom: 50px;
     }
     .photo-product{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 31.41%;
-        // width: 63.59%;
-        background-repeat: no-repeat;
-        background-position: left bottom;
+        position: relative;
     }
+}
+.section-choose_photo {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    min-height: 686px;
+    transform: translate(-22%,-10%);
 }
 
 .section-how_inner {
@@ -85,12 +87,11 @@
         margin: 10px 0 40px;
     }
 }
-// .section-kids_pic {
-//     height: 100%;
-// }
+
 .section-diagn_inner {
     grid-template-columns: 500px auto;
-    align-items: start;
+    transform: translateY(-5%);
+    grid-column-gap: 5%;
 }
 .section-kids_pic-item, .section-kids_diagn-item {
     height: 100%;
@@ -105,15 +106,11 @@
 }
 
 .section-diagn_intro {
-    transform: translateY(110.5%);
     .section-heading {
         margin-bottom: 60px;
     }
 }
 
-.section-kids_diagn-item {
-    transform: translate(5%,28.9%);
-}
 
 .section-protect_inner {
     display: flex;
