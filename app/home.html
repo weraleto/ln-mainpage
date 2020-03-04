@@ -1,124 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Vivasensess</title>
-		<meta name="robots" content="noindex, nofollow">
-		<meta name="description" content="">
-		<meta property="og:image" content="img/images/test.jpg">
-		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-		<link rel="manifest" href="img/favicon/site.webmanifest">
-		<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b146c4">
-		<meta name="msapplication-TileColor" content="#2b5797">
-		<meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" href="css/main.min.css">
-	</head>
-	<body>
-		<!-- Гальп скомпилит проект по такому пути http://localhost:3000/home.html только если не меняли порт вручную-->
-		<!-- ------------- -->
-		<!-- Рабочая папка dev. Работаем внутри home.html, home.js, в scss набросал заготовки с разбивкой на компоненты,
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Vivasensess</title>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="description" content="">
+	<meta property="og:image" content="img/images/test.jpg">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#b146c4">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+	<!-- Гальп скомпилит проект по такому пути http://localhost:3000/home.html только если не меняли порт вручную-->
+	<!-- ------------- -->
+	<!-- Рабочая папка dev. Работаем внутри home.html, home.js, в scss набросал заготовки с разбивкой на компоненты,
 		тут выбирайте любой или создавайте свой по удобству-->
-		<!-- ------------- -->
-		<!-- пример использования свг иконки из спрайта
+	<!-- ------------- -->
+	<!-- пример использования свг иконки из спрайта
 		внутри href указываем путь, где после sprite.svg указывает id
 		который состоит из префикса viva (его в таске указали) и имени svg иконки ./img/svg/sprite.svg#viva_icon-up-->
-		<style>
+	<style>
+
+	</style>
+	<!-- <svg class="icon icon_up"><use xlink:href="./img/svg/sprite.svg#viva_stamp"></use></svg> -->
+
+	<header class="main_header">
+		<div class="main_header-nav_wrapper">
+			<div class="main_header-nav">
+				<div class="main_header-nav-left">
+					<div class="main_header-nav-left_item main_header-nav-logo icon_use">
+						<svg class="icon icon_logo">
+							<use xlink:href="./img/svg/sprite.svg#viva_main-logo"></use>
+						</svg>
+					</div>
+					<div class="main_header-nav-left_item main_header-nav-active-btns">
+						<div class="main_header-nav-contact">
+							093 388 88 88
+						</div>
+						<div class="main_header-nav-shopping-cart">
+						</div>
+					</div>
+
+				</div>
+				<div class="main_header-nav-right">
+					<div class="main_header-nav-langs">
+						English
+					</div>
+					<div class="main_header-nav-burger icon_use">
+						<svg class="icon icon_burger">
+							<use xlink:href="./img/svg/sprite.svg#viva_burger"></use>
+						</svg>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container main_header-content">
+			<div class="main_header-heading">
+				<h1>био пасты</h1>
+				<h2>образ жизни здорового человека</h2>
+			</div>
+			<div class="main_header-subheading">
+				<div class="main_header-subinfo">Швейцарская лаборатория</div>
+				<div class="btn-group">
+					<button class="btn btn-green">Получить консультацию</button>
+					<button class="btn btn-gray">Пройти диагностику</button>
+				</div>
+				<div class="main_header-stamp icon_use">
+					<svg class="icon icon_stamp">
+						<use xlink:href="./img/svg/sprite.svg#viva_stamp"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- how hork -->
+	<section class="section section-green section-how">
+		<div class=" container section-how_inner">
+			<div class="section-how_intro">
+				<h2 class="section-heading">
+					как работают био пасты vivassense
+				</h2>
+				<div class="section-how_product-description">
+					Серия биопаст разработанна командой ученых и фармацевтов мира для укрепления
+					и восстановления жизненных сил организма.
+				</div>
+			</div>
 			
-		</style>
-		<!-- <svg class="icon icon_up"><use xlink:href="./img/svg/sprite.svg#viva_stamp"></use></svg> -->
-
-		<header class="main_header">
-			<div class="main_header-nav_wrapper">
-				<div class="main_header-nav">
-					<div class="main_header-nav-left">
-						<div class="main_header-nav-left_item main_header-nav-logo icon_use">
-							<svg class="icon icon_logo"><use xlink:href="./img/svg/sprite.svg#viva_main-logo"></use></svg>
-						</div>
-						<div class="main_header-nav-left_item main_header-nav-active-btns">
-							<div class="main_header-nav-contact">
-								093 388 88 88
-							</div>
-							<div class="main_header-nav-shopping-cart">
-							</div>
-						</div>
-						
+			<div class="section-how_advantages">
+				<div class="section-how_advantages-item">
+					<div class="section-how_advantages-icon_wrapper">
+						<img class="section-how_advantages-icon" src="./img/images/bl2-adv1.png">
 					</div>
-					<div class="main_header-nav-right">
-						<div class="main_header-nav-langs">
-							English
-						</div>
-						<div class="main_header-nav-burger icon_use">
-							<svg class="icon icon_burger"><use xlink:href="./img/svg/sprite.svg#viva_burger"></use></svg>
-
-						</div>
+					<div class="section-how_advantages-text">Каждый продукт в своей основе
+						имеет 9 витаминов, 9 минеральных
+						веществ и 15 аминокислот.
+						То Что необходимо человеку в сутки</div>
+				</div>
+				<div class="section-how_advantages-item">
+					<div class="section-how_advantages-icon_wrapper">
+						<img class="section-how_advantages-icon" src="./img/images/bl2-adv2.png">
+					</div>
+					<div class="section-how_advantages-text">
+						Пастообразная консистенция,
+						благодаря которой происходит
+						моментальное всасывание
+						и усвоение продукта
+					</div>
+				</div>
+				<div class="section-how_advantages-item">
+					<div class="section-how_advantages-icon_wrapper">
+						<img class="section-how_advantages-icon" src="./img/images/bl2-adv3.png">
+					</div>
+					<div class="section-how_advantages-text">
+						Природное восстановление
+						здоровья организма
 					</div>
 				</div>
 			</div>
-			<div class="container main_header-content">
-				<div class="main_header-heading">
-					<h1>био пасты</h1>
-					<h2>образ жизни здорового человека</h2>
-				</div>
-				<div class="main_header-subheading">
-					<div class="main_header-subinfo">Швейцарская лаборатория</div>
-					<div class="btn-group">
-						<button class="btn btn-green">Получить консультацию</button>
-						<button class="btn btn-gray">Пройти диагностику</button>
-					</div>
-					<div class="main_header-stamp icon_use">
-						<svg class="icon icon_stamp"><use xlink:href="./img/svg/sprite.svg#viva_stamp"></use></svg>
-					</div>
-				</div>
-			</div>
-		</header>
-		<!-- how hork -->
-		<!-- <section class="section section-green">
-			<div class=" container">
-				<h2 class="section-heading">
-					выбери свой продукт для здоровья
-				</h2>
-				<button class="btn btn-green">Смотреть все продукты</button>
-			</div>
-		</section> -->
-		<!-- cardio protect -->
-		<section></section>
-		<!-- choose your product -->
-		<section class="section section-green section-choose">
-			<div class=" container">
-				<h2 class="section-heading">
-					выбери свой продукт здоровья
-				</h2>
-				<button class="btn btn-white">Смотреть все продукты</button>
-			</div>
-			<div class="photo-product" style="background-image: url('./img/images/bl4.png');">
-			</div>
-		</section>
-		<!-- for children -->
-		<section></section>
-		<!-- diagnostics -->
-		<section></section>
-		<!-- footer-nav -->
-		<section></section>
-		<!-- footer -->
-		<footer></footer>
+		</div>
+	</section>
+	<!-- cardio protect -->
+	<section></section>
+	<!-- choose your product -->
+	<section class="section section-green section-choose">
+		<div class=" container">
+			<h2 class="section-heading">
+				выбери свой продукт здоровья
+			</h2>
+			<button class="btn btn-white">Смотреть все продукты</button>
+		</div>
+		<div class="photo-product" style="background-image: url('./img/images/bl4.png');">
+		</div>
+	</section>
+	<!-- for children -->
+	<section></section>
+	<!-- diagnostics -->
+	<section></section>
+	<!-- footer-nav -->
+	<section></section>
+	<!-- footer -->
+	<footer></footer>
 
 
-		<!-- ------------- -->
-		<!-- ссылка на fullPage.js - https://alvarotrigo.com/fullPage/-->
-		<!-- ------------- -->
-		<!-- вот ссылка на инициализацию fullPage для jQuery https://github.com/alvarotrigo/fullPage.js#initialization-with-jquery-->
-		<!-- ------------- -->
-		<!-- вот ссылка на пример с обработчиком ивентов https://alvarotrigo.com/fullPage/examples/callbacks.html-->
-		<!-- ------------- -->
-		<!-- библиотеку для слайдера выбирайте которая вам нравится, тут не принципиально, используйте то, с чем проще-->
-		<!-- ------------- -->
+	<!-- ------------- -->
+	<!-- ссылка на fullPage.js - https://alvarotrigo.com/fullPage/-->
+	<!-- ------------- -->
+	<!-- вот ссылка на инициализацию fullPage для jQuery https://github.com/alvarotrigo/fullPage.js#initialization-with-jquery-->
+	<!-- ------------- -->
+	<!-- вот ссылка на пример с обработчиком ивентов https://alvarotrigo.com/fullPage/examples/callbacks.html-->
+	<!-- ------------- -->
+	<!-- библиотеку для слайдера выбирайте которая вам нравится, тут не принципиально, используйте то, с чем проще-->
+	<!-- ------------- -->
 
-		<!-- Load Scripts Start -->
-		<script>var scr = {"scripts":[{"src" : "js/libs.min.js", "async" : false}, {"src" : "js/home.min.js", "async" : false}, ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);</script>
-		<!-- Load Scripts End -->
-	</body>
+	<!-- Load Scripts Start -->
+	<script>
+		var scr = {
+			"scripts": [{
+				"src": "js/libs.min.js",
+				"async": false
+			}, {
+				"src": "js/home.min.js",
+				"async": false
+			}, ]
+		};
+		! function (t, n, r) {
+			"use strict";
+			var c = function (t) {
+				if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+				for (var r = 0; r < t.length; r++) {
+					var c = n.createElement("script"),
+						e = t[r];
+					c.src = e.src, c.async = e.async, n.body.appendChild(c)
+				}
+				return !0
+			};
+			t.addEventListener ? t.addEventListener("load", function () {
+				c(r.scripts);
+			}, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+				c(r.scripts)
+			}) : t.onload = function () {
+				c(r.scripts)
+			}
+		}(window, document, scr);
+	</script>
+	<!-- Load Scripts End -->
+</body>
+
 </html>

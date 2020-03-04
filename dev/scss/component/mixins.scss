@@ -42,3 +42,8 @@
     src: $src;
   }
 }
+
+@mixin spacedText {
+  letter-spacing: 3.2px;
+  font-weight: 500;
+}

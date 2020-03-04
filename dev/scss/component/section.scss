@@ -11,26 +11,61 @@
 }
 
 .section-heading{
-    letter-spacing: 3px;
+    letter-spacing: 2.25px;
     text-transform: uppercase;
     font-weight: 400;
     color: black;
     line-height: 1.5;
     font-size: 30px;
 }
-.section-choose .section-heading {
-    max-width: 36.5%;
-    margin-bottom: 50px;
+.section-choose {
+    .section-heading {
+        max-width: 36.5%;
+        margin-bottom: 50px;
+    }
+    .photo-product{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 31.41%;
+        // width: 63.59%;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+    }
 }
-.section-choose .photo-product{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 63.59%;
-    background-repeat: no-repeat;
-    background-position: left bottom;
+
+.section-how_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
+
+.section-how_product-description{
+    margin-top: 50px;
+}
+.section-how_advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 11.54%;
+}
+.section-how_product-description {
+    @include spacedText;
+}
+.section-how_advantages-icon_wrapper {
+    margin-bottom: 20px;
+}
+.section-how_advantages-icon {
+    max-width: 124px;
+}
+.section-how_advantages-text {
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+
 
 @media all and (min-width: 320px) {
 
