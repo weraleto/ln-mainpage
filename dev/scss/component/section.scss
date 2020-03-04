@@ -3,6 +3,7 @@
 .section{
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 .section-green{
     padding: 132px 0;
@@ -69,11 +70,13 @@
     background: url('./../../img/images/bl5-backgr.png') no-repeat center center $bgGrayCurves;
     background-size: cover;
 }
-.section-kids_inner {
+.section-kids_inner, .section-diagn_inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     height: 100%;
+}
+.section-kids_inner {
     padding: 6.3% 0;
 }
 .section-kids_intro {
@@ -85,7 +88,11 @@
 // .section-kids_pic {
 //     height: 100%;
 // }
-.section-kids_pic-item {
+.section-diagn_inner {
+    grid-template-columns: 500px auto;
+    align-items: start;
+}
+.section-kids_pic-item, .section-kids_diagn-item {
     height: 100%;
     width: auto;
     position: relative;
@@ -95,6 +102,17 @@
     max-height: 532px;
     bottom: 11.25%;
     transform: translateX(-29%);
+}
+
+.section-diagn_intro {
+    transform: translateY(110.5%);
+    .section-heading {
+        margin-bottom: 60px;
+    }
+}
+
+.section-kids_diagn-item {
+    transform: translate(5%,28.9%);
 }
 
 
