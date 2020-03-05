@@ -155,6 +155,7 @@
 
 .item-gallery_intro-num {
     opacity: 1;
+    transition: opacity .3s ease;
     span{
         font-size: 73.34px;
     }

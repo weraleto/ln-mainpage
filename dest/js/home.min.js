@@ -5,9 +5,9 @@ $(document).ready(function () {
      $('.section-protect_item').css({'width':startWidth+'px'});
         $('.section-protect_item').css({'width' : startWidth-(startWidth*0.14)+'px'});
         let imgBlock=event.target.closest('.section-protect_item');
-        $(imgBlock).css({'width' : startWidth+(startWidth*0.14)*7+'px'})
-                    .find('.item-gallery_overlay').addClass('hide-overlay')
-                    .find('.item-gallery_intro').removeClass('hide-bl');
+        $(imgBlock).css({'width' : startWidth+(startWidth*0.14)*7+'px'});
+        $(imgBlock).find('.item-gallery_overlay').addClass('hide-overlay');
+        $(imgBlock).find('.item-gallery_intro').removeClass('hide-bl');
 
 
         let currId=imgBlock.id;
@@ -26,17 +26,6 @@ $(document).ready(function () {
             frames++;
         },150)
 
-        
-        function drawImage(img,num){
-            num=num?num-1:0;
-            canvasImage.onload = function() {
-                width = 98;
-                height = 82;
-                canvas.drawImage(canvasImage,0,834*num,834,834,12,0,98,82);
-
-            }
-            canvasImage.src=img;
-        }
 
         $(e.target).on('mouseout',()=>{
             $('.section-protect_item').css({'width' : startWidth+'px'});
@@ -49,6 +38,16 @@ $(document).ready(function () {
         $('.section-protect_item').css({'width' : $(document).width()/8+'px'});
     });
     
+    function drawImage(img,num){
+        num=num?num-1:0;
+        canvasImage.onload = function() {
+            width = 98;
+            height = 82;
+            canvas.drawImage(canvasImage,0,834*num,834,834,12,0,98,82);
+
+        }
+        canvasImage.src=img;
+    }
 
 });
 
