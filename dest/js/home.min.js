@@ -104,9 +104,18 @@ $(document).ready(function () {
         })
     })
 
+    $('#fullpage').fullpage({
+        licenseKey: 'C39B3150-69A64A57-88A2443B-EDCA6358',
+        autoScrolling:true,
+        sectionSelector: '.fullpage_section'
+    });
 
+    //methods
+    $.fn.fullpage.setAllowScrolling(true);
+
+    
     $('.icon-up').click(()=>{
-        $('html, body').animate({ scrollTop: 0 }, 1000);
+        fullpage_api.moveTo(1);
     })
 });
 
