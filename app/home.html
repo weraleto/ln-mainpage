@@ -98,7 +98,7 @@
 			<div class="section-how_advantages">
 				<div class="section-how_advantages-item">
 					<div class="section-how_advantages-icon_wrapper">
-						<img class="section-how_advantages-icon" src="./img/images/bl2-adv1.png">
+						<svg class="section-how_advantages-icon"><use xlink:href="./img/svg/sprite.svg#viva_heart"></use></svg>
 					</div>
 					<div class="section-how_advantages-text">Каждый продукт в своей основе
 						имеет 9 витаминов, 9 минеральных
@@ -107,7 +107,7 @@
 				</div>
 				<div class="section-how_advantages-item">
 					<div class="section-how_advantages-icon_wrapper">
-						<img class="section-how_advantages-icon" src="./img/images/bl2-adv2.png">
+						<svg class="section-how_advantages-icon"><use xlink:href="./img/svg/sprite.svg#viva_molecule"></use></svg>
 					</div>
 					<div class="section-how_advantages-text">
 						Пастообразная консистенция,
@@ -118,7 +118,7 @@
 				</div>
 				<div class="section-how_advantages-item">
 					<div class="section-how_advantages-icon_wrapper">
-						<img class="section-how_advantages-icon" src="./img/images/bl2-adv3.png">
+						<svg class="section-how_advantages-icon"><use xlink:href="./img/svg/sprite.svg#viva_quad"></use></svg>
 					</div>
 					<div class="section-how_advantages-text">
 						Природное восстановление
@@ -225,14 +225,16 @@
 	</section>
 	<!-- choose your product -->
 	<section class="section section-green section-choose">
-		<div class=" container">
-			<h2 class="section-heading">
-				выбери свой продукт здоровья
-			</h2>
-			<button class="btn btn-white">Смотреть все продукты</button>
-		</div>
-		<div class="photo-product">
-			<img src="./img/images/bl4.png" alt="" class="section-choose_photo">
+		<div class=" container section-choose_inner">
+			<div class="section-choose_intro">
+				<h2 class="section-heading">
+					выбери свой продукт здоровья
+				</h2>
+				<button class="btn btn-white">Смотреть все продукты</button>
+			</div>
+			<div class="photo-product">
+				<img src="./img/images/bl4.png" alt="" class="section-choose_photo">
+			</div>
 		</div>
 	</section>
 	<!-- for children -->
@@ -270,9 +272,55 @@
 		</div>
 	</section>
 	<!-- footer-nav -->
-	<section></section>
+	<section class="section footer-gallery">
+		<div class="footer-gallery_tablecell">
+			<div class="footer-gallery_item quality_one" data-quality="one">
+				<div class="footer-gallery_heading">Блог</div>
+
+				<div class="footer-gallery_photo footer-gallery_photo-one"
+					style="background-image: url('./img/images/bl7-im1.png');"></div>
+			</div>
+			<div class="footer-gallery_item quality_two" data-quality="two">
+				<div class="footer-gallery_heading">Блог</div>
+
+				<div class="footer-gallery_photo footer-gallery_photo-two"
+					style="background-image: url('./img/images/bl7-im2.png');"></div>
+			</div>
+			<div class="footer-gallery_item quality_three" data-quality="three">
+				<div class="footer-gallery_heading">документы</div>
+				<div class="footer-gallery_photo"></div>
+			</div>
+			<div class="footer-gallery_item quality_four" data-quality="four">
+				<div class="footer-gallery_heading">исследования</div>
+				<div class="footer-gallery_photo footer-gallery_photo-four"
+					style="background-image: url('./img/images/bl7-im3.png');"></div>
+			</div>
+			<div class="footer-gallery_item quality_five" data-quality="five">
+				<div class="footer-gallery_heading">
+					<div class="footer-gallery_icon">
+						<svg class="section-how_advantages-icon"><use xlink:href="./img/svg/sprite.svg#viva_heart"></use></svg>
+					</div>
+					<div>блог</div></div>
+				<div class="footer-gallery_photo"></div>
+			</div>
+			<div class="footer-gallery_item quality_six" data-quality="six">
+				<div class="footer-gallery_heading">
+					
+					О нас</div>
+				<div class="footer-gallery_photo footer-gallery_photo-six"
+					style="background-image: url('./img/images/bl7-im4.png');"></div>
+			</div>
+			<div class="footer-gallery_item quality_seven" data-quality="seven">
+				<div class="footer-gallery_heading"></div>
+				<div class="footer-gallery_photo"></div>
+			</div>
+		</div>
+
+	</section>
 	<!-- footer -->
-	<footer></footer>
+	<footer class="main-footer">
+
+	</footer>
 
 
 	<!-- ------------- -->
