@@ -4,7 +4,7 @@
 }
 html {
   font-family: 'Geometria', serif;
-  font-weight: normal;
+  font-weight: 400;
   -webkit-text-size-adjust: 100%;
   color: black;
 }
@@ -71,6 +71,17 @@ button:-moz-focusring,
 }
 [hidden] {
   display: none;
+}
+
+nav ul { 
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  list-style-type: none;
+}
+nav a:link, nav a:hover, nav a:visited, a:active {
+  color: inherit;
 }
 
 .icon_use{

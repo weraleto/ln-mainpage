@@ -102,8 +102,8 @@
 .kids-product_symb {
     position: absolute;
     max-height: 532px;
-    bottom: 11.25%;
-    transform: translateX(-29%);
+    bottom: 50%;
+    transform: translate(-29%,58%);
 }
 
 .section-diagn_intro {
@@ -332,7 +332,69 @@
 }
 
 
+.main-footer {
+    height: 75vh;
+    padding-top: 45px;
+    color: #5d5d5d;
+}
 
+.main-footer_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+.main-footer_nav {
+    width:  47.3%;
+}
+.main-footer_nav-wrapper {
+    justify-content: space-between;
+    display: flex;
+}
+
+.main-footer_nav-item {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    min-width: 65px;
+    max-width: 110px;
+
+    a {
+        width: 100%;
+    }
+}
+.main-footer_nav-item:last-child{
+    max-width: 125px;
+}
+
+.main-footer_contacts {
+    font-size: 12px;
+
+    
+}
+
+.footer-contacts_line-1,.footer-contacts_line-2, .footer-contacts_line-3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.footer-contacts_line-1 > *:not(:last-child) {
+    margin-right: 13px;
+}
+
+.footer-contacts_line-2 {
+    margin: 15px 0 25px;
+}
+
+.footer-contacts_address {
+    max-width: 60%;
+    text-align: right;
+}
 
 @media all and (min-width: 320px) {
 

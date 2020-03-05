@@ -104,6 +104,10 @@ $(document).ready(function () {
         })
     })
 
+
+    $('.icon-up').click(()=>{
+        $('html, body').animate({ scrollTop: 0 }, 1000);
+    })
 });
 
 
