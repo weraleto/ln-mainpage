@@ -29,7 +29,7 @@
 		внутри href указываем путь, где после sprite.svg указывает id
 		который состоит из префикса viva (его в таске указали) и имени svg иконки ./img/svg/sprite.svg#viva_icon-up-->
 	<div id="fullpage">
-		<header class=" main_header slide fullpage_section" data-anchor="header">
+		<header class=" main_header slide fullpage_section" >
 			<div class="main_header-nav_wrapper">
 				<div class="main_header-nav">
 					<div class="main_header-nav-left">
@@ -39,23 +39,31 @@
 							</svg>
 						</div>
 						<div class="main_header-nav-left_item main_header-nav-active-btns">
-							<div class="main_header-nav-contact">
-								093 388 88 88
+							<div class="main_header-nav-contact nav-toggle-list">
+								<div class="nav-toggle-list_name">093 388 88 88</div>
+								<div class="nav-toggle-list_arr-down">
+									<svg class="icon-arr_down">
+										<use xlink:href="./img/svg/sprite.svg#viva_arr_down"></use>
+									</svg>
+								</div>
 							</div>
-							<div class="main_header-nav-shopping-cart">
+							<div class="main_header-nav-shopping-cart icon_use">
+								<svg class="icon-header icon-shoppingcart"><use xlink:href="./img/svg/sprite.svg#viva_main-basket"></use></svg>
 							</div>
 						</div>
 	
 					</div>
 					<div class="main_header-nav-right">
-						<div class="main_header-nav-langs">
-							English
+						<div class="main_header-nav-langs nav-toggle-list">
+							<div class="nav-toggle-list_name">English</div>
+							<div class="nav-toggle-list_arr-down">
+								<svg class="icon-arr_down">
+									<use xlink:href="./img/svg/sprite.svg#viva_arr_down"></use>
+								</svg>
+							</div>
 						</div>
 						<div class="main_header-nav-burger icon_use">
-							<svg class="icon icon_burger">
-								<use xlink:href="./img/svg/sprite.svg#viva_burger"></use>
-							</svg>
-	
+							<svg class="icon-header icon_burger"><use xlink:href="./img/svg/sprite.svg#viva_burger"></use></svg>
 						</div>
 					</div>
 				</div>
@@ -66,11 +74,15 @@
 					<h2>образ жизни здорового человека</h2>
 				</div>
 				<div class="main_header-subheading">
-					<div class="main_header-subinfo">Швейцарская лаборатория</div>
-					<div class="btn-group">
-						<button class="btn btn-green">Получить консультацию</button>
-						<button class="btn btn-gray">Пройти диагностику</button>
+					<div>
+
+						<div class="main_header-subinfo">Швейцарская лаборатория</div>
+						<div class="btn-group">
+							<button class="btn btn-green">Получить консультацию</button>
+							<button class="btn btn-gray">Пройти диагностику</button>
+						</div>
 					</div>
+
 					<div class="main_header-stamp icon_use">
 						<svg class="icon icon_stamp">
 							<use xlink:href="./img/svg/sprite.svg#viva_stamp"></use>
@@ -79,6 +91,7 @@
 				</div>
 			</div>
 		</header>
+		
 		<!-- how hork -->
 		<section class="section slide fullpage_section  section-green section-how">
 			<div class=" container section-how_inner">
@@ -135,7 +148,7 @@
 						<div class="item-gallery_intro-num">№<span>1</span></div>
 						<div class="item-gallery_intro-heading">cardio protect</div>
 						<div class="item-gallery_intro-icon">
-							<img class="ref" src="./img/images/heartsprite.png" style="display: none;">
+							<img class="ref" src="./img/images/heartsprite.png">
 							<canvas class="item-gallery_intro-canvas"></canvas>
 						</div>
 					</div>
@@ -146,7 +159,7 @@
 						<div class="item-gallery_intro-num">№<span>2</span></div>
 						<div class="item-gallery_intro-heading">cardio protect</div>
 						<div class="item-gallery_intro-icon">
-							<img class="ref" src="./img/images/animspite2.png" style="display: none;">
+							<img class="ref" src="./img/images/animspite2.png" >
 							<canvas class="item-gallery_intro-canvas"></canvas>
 						</div>
 					</div>
@@ -157,7 +170,7 @@
 						<div class="item-gallery_intro-num">№<span>3</span></div>
 						<div class="item-gallery_intro-heading">cardio protect</div>
 						<div class="item-gallery_intro-icon">
-							<img class="ref" src="./img/images/animspite3.png" style="display: none;">
+							<img class="ref" src="./img/images/animspite3.png" >
 							<canvas class="item-gallery_intro-canvas"></canvas>
 						</div>
 					</div>
@@ -168,7 +181,7 @@
 						<div class="item-gallery_intro-num">№<span>4</span></div>
 						<div class="item-gallery_intro-heading">cardio protect</div>
 						<div class="item-gallery_intro-icon">
-							<img class="ref" src="./img/images/heartsprite.png" style="display: none;">
+							<img class="ref" src="./img/images/heartsprite.png" >
 							<canvas class="item-gallery_intro-canvas"></canvas>
 						</div>
 					</div>
@@ -179,7 +192,7 @@
 						<div class="item-gallery_intro-num">№<span>5</span></div>
 						<div class="item-gallery_intro-heading">cardio protect</div>
 						<div class="item-gallery_intro-icon">
-							<img class="ref" src="./img/images/animspite2.png" style="display: none;">
+							<img class="ref" src="./img/images/animspite2.png" >
 							<canvas class="item-gallery_intro-canvas"></canvas>
 						</div>
 					</div>
@@ -190,7 +203,7 @@
 						<div class="item-gallery_intro-num">№<span>6</span></div>
 						<div class="item-gallery_intro-heading">cardio protect</div>
 						<div class="item-gallery_intro-icon">
-							<img class="ref" src="./img/images/animspite3.png" style="display: none;">
+							<img class="ref" src="./img/images/animspite3.png" >
 							<canvas class="item-gallery_intro-canvas"></canvas>
 						</div>
 					</div>
@@ -201,7 +214,7 @@
 						<div class="item-gallery_intro-num">№<span>7</span></div>
 						<div class="item-gallery_intro-heading">cardio protect</div>
 						<div class="item-gallery_intro-icon">
-							<img class="ref" src="./img/images/heartsprite.png" style="display: none;">
+							<img class="ref" src="./img/images/heartsprite.png" >
 							<canvas class="item-gallery_intro-canvas"></canvas>
 						</div>
 					</div>
@@ -212,13 +225,14 @@
 						<div class="item-gallery_intro-num">№<span>8</span></div>
 						<div class="item-gallery_intro-heading">cardio protect</div>
 						<div class="item-gallery_intro-icon">
-							<img class="ref" src="./img/images/animspite2.png" style="display: none;">
+							<img class="ref" src="./img/images/animspite2.png" >
 							<canvas class="item-gallery_intro-canvas"></canvas>
 						</div>
 					</div>
 					<div class="item-gallery_overlay"></div>
 				</div>
 			</div>
+			<div class="slider-protect-navigation"></div>
 		</section>
 		<!-- choose your product -->
 		<section class="section slide fullpage_section  section-green section-choose">
@@ -312,6 +326,9 @@
 					<div class="footer-gallery_photo"></div>
 				</div>
 			</div>
+			<div class="footer-gallery-nav">
+
+			</div>
 	
 		</section>
 		<!-- footer -->
@@ -391,13 +408,6 @@
 		}(window, document, scr);
 	</script>
 
-	<!-- fullpage init -->
-	<!-- <script>
-		$(document).ready(function() {
-			
-		});
-	</script> -->
-	<!-- Load Scripts End -->
 </body>
 
 </html>

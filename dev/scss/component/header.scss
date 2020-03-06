@@ -3,7 +3,7 @@
     height: 100vh;
     background: url('./../../img/images/main-header.jpg') no-repeat top center;
     background-size: cover;
-    padding: $paddingH $paddingV;
+    padding: $paddingV $paddingH;
 }
 .main_header-nav_wrapper{
     min-height: 29.26%;
@@ -13,15 +13,52 @@
     display: flex;
     justify-content: space-between;
 
+    font-size: 12px;
     color: $fillGray;
 }
 .main_header-nav-left, .main_header-nav-right{
     display: flex;
 }
+.main_header-nav-left { 
+    width: 25.39%;
+    justify-content: space-between;
+}
+.main_header-nav-right {
+    position: relative;
+    top: 4px;
+}
 
 .main_header-nav-left_item{
-    flex-basis: 190px;
-    flex-grow: 1;
+
+    display: flex;
+}
+
+.main_header-nav-contact {
+    margin-right: $gap;
+}
+
+.main_header-nav-langs {
+    color: black;
+    position: relative;
+    top: -4px;
+    margin-right: $gap;
+}
+
+.nav-toggle-list {
+    display: flex;
+    position: relative;
+    max-height: 1.5em;
+}
+
+.nav-toggle-list_name {
+    padding-right: 12px;
+}
+
+.nav-toggle-list_arr-down {
+    position: absolute;
+    right: 0;
+    top: 35%;
+    transform: translateY(-50%);
 }
 
 .main_header-content {
@@ -48,6 +85,9 @@
     }
 }
 
+.btn-group :first-child{
+    margin-right: $paddingH;
+}
 
 .main_header-subinfo{
     @include spacedText;
@@ -59,16 +99,54 @@
     margin-top: 3.14%;
 }
 
-@media all and (min-width: 320px) {
+// @media all and (min-width: 320px) {
 
+// }
+
+
+@media all and (max-width: 1280px) {
+    .main_header{
+        padding: 20px 28px 40px;
+    }
+
+    .main_header-nav-active-btns, .main_header-nav-right {
+        display: none;
+    }
+
+    .btn-group {
+        max-width: 217px;
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-group :first-child {
+        margin-right: 0;
+        margin-bottom: 21px;
+    }
+    .btn-group :last-child {
+        max-width: 196px;
+        min-width: initial;
+    }
+
+    .main_header-nav_wrapper {
+        min-height: 23.26%;
+    }
+
+    .main_header-content {
+        height: 75.74%;
+    }
+    .main_header-stamp{
+        margin-top: 9%;
+    }
+    .main_header-subheading {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+    }
 }
 
-
-@media all and (min-width: 768px) {
-
-}
-
-@media all and (min-width: 1280px) {
+// @media all and (min-width: 1280px) {
     
-}
+// }
 

@@ -25,3 +25,39 @@
     width: 44px;
     height: 44px;
 }
+
+.icon-header {
+    fill: $fillIconsHeader;
+}
+
+.icon-shoppingcart {
+    width: 13px;
+    height: 13px;
+}
+
+.icon-arr_down {
+    width: 8px;
+    height: 4px;
+}
+
+
+// @media all and (min-width: 320px) {
+
+// }
+
+
+@media all and (max-width: 1280px) {
+    .icon_logo{
+        width: 165px;
+        max-height: 86px;
+    }
+    .icon-media {
+        width: 23px;
+        height: 23px;
+    }
+
+}
+
+// @media all and (min-width: 1280px) {
+    
+// }

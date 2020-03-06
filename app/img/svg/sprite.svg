@@ -1,5 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
 	
+		<symbol id="viva_arr_down" viewBox="0 0 8 4">
+			<image data-name="Векторный смарт-объект3 копия" width="8" height="4" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAASklEQVQImW2JMQrAIBAER/O+dNrmEXfv8B5hkTagvwsE5MCAhVvNzoRi1oCT/XoEEvBsursUVeQFMnAv0Tl7C78pZgdQ571U5AMYxz0RAHvyBjYAAAAASUVORK5CYII="></image>
+		</symbol>
+	
 		<symbol id="viva_burger" viewBox="0 0 29 12">
 			<image data-name="Векторный смарт-объект" width="29" height="12" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAMCAYAAACeGbYxAAAAW0lEQVQ4jWNkwAF6+/peMzAwiOCSpwC8YcGjV56BgYGNBpb+ooGZowABcCYkZNDb1weK2wYGBgYuKoTdO6bRCBh2gLG3rw+UOGhRCOACv0Al0kMaFXfYAQPDGwAI3Qx8QKPOAQAAAABJRU5ErkJggg=="></image>
 		</symbol>

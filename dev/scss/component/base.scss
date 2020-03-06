@@ -90,11 +90,17 @@ nav a:link, nav a:hover, nav a:visited, a:active {
 
 
 @media all and (min-width: 320px) {
-
+  .container {
+    padding: 0 22px;
+  }
 }
 
 @media all and (min-width: 767px) {
-
+  .container {
+    padding: 0 28px;
+    max-width: 767px;
+    margin: 0 auto;
+  }
 }
 
 @media all and (min-width: 1280px) {
