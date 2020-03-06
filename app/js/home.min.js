@@ -136,6 +136,18 @@ $(document).ready(function () {
            dotsClass: 'slick-dots gray'
        });
     }
+
+    $('.main_header-nav-burger').click((e)=>{
+        $('.menu_wrapper').addClass('menu_show');
+        
+        $("body").css("overflow-y","hidden");
+        $('.menu_wrapper').click((e)=>{
+            if($(e.target).hasClass('close-trigger')) {
+                $('.menu_wrapper').removeClass('menu_show');
+                $("body").css("overflow-y","visible");
+            }
+        })
+    })
 });
 
 

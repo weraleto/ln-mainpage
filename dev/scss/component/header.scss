@@ -27,7 +27,12 @@
     position: relative;
     top: 4px;
 }
-
+.main_header-nav-burger {
+    cursor: pointer;
+}
+.main_header-nav-burger.nav-mobile {
+    display: none;
+}
 .main_header-nav-left_item{
 
     display: flex;
@@ -144,6 +149,14 @@
         flex-direction: column;
         justify-content: flex-end;
 
+    }
+    
+    .main_header-nav-burger.nav-mobile {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 28px;
+        z-index: 150;
     }
 }
 
