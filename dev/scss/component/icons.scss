@@ -58,6 +58,9 @@
 
 }
 
-// @media all and (min-width: 1280px) {
-    
-// }
+@media all and (max-width: 767px) {
+    .icon_logo{
+        width: 130px;
+        max-height: 86px;
+    }
+}
