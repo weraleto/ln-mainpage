@@ -109,6 +109,8 @@ $(document).ready(function () {
             autoScrolling:true,
             sectionSelector: '.fullpage_section',
             lockAnchors:true,
+            navigation: true,
+            navigationPosition: 'right',
             onLeave: function(origin, destination, direction){
                 if(destination.anchor=='kids'||destination.anchor=='diagn'||destination.anchor=='choose'){
 
