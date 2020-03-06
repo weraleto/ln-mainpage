@@ -29,7 +29,7 @@
 		внутри href указываем путь, где после sprite.svg указывает id
 		который состоит из префикса viva (его в таске указали) и имени svg иконки ./img/svg/sprite.svg#viva_icon-up-->
 	<div id="fullpage">
-		<header class=" main_header slide fullpage_section" >
+		<header class=" main_header slide fullpage_section" data-anchor="header">
 			<div class="main_header-nav-burger nav-mobile icon_use">
 				Menu
 				<svg class="icon-header icon_burger"><use xlink:href="./img/svg/sprite.svg#viva_burger"></use></svg>
@@ -97,7 +97,7 @@
 		</header>
 		
 		<!-- how hork -->
-		<section class="section slide fullpage_section  section-green section-how">
+		<section class="section slide fullpage_section  section-green section-how" data-anchor="work">
 			<div class=" container section-how_inner">
 				<div class="section-how_intro">
 					<h2 class="section-heading">
@@ -143,7 +143,7 @@
 			</div>
 		</section>
 		<!-- cardio protect -->
-		<section class="section slide fullpage_section  section-protect">
+		<section class="section slide fullpage_section  section-protect" data-anchor="protect">
 			<div class="section-protect_inner">
 				<div class="section-protect_item" id="bl3-img1" 
 				style="background-image: url('./img/images/bl3-img1.jpg');"
@@ -239,7 +239,7 @@
 			<div class="slider-protect-navigation"></div>
 		</section>
 		<!-- choose your product -->
-		<section class="section slide fullpage_section  section-green section-choose">
+		<section class="section slide fullpage_section  section-green section-choose" data-anchor="choose">
 			<div class=" container section-choose_inner">
 				<div class="section-choose_intro">
 					<h2 class="section-heading">
@@ -248,16 +248,16 @@
 					<button class="btn btn-white">Смотреть все продукты</button>
 				</div>
 				<div class="photo-product">
-					<img src="./img/images/bl4.png" alt="" class="section-choose_photo">
+					<img src="./img/images/bl4.png" alt="" class="section-photo hide-pic section-choose_photo">
 				</div>
 			</div>
 		</section>
 		<!-- for children -->
-		<section class="section slide fullpage_section  section-kids">
+		<section class="section slide fullpage_section  section-kids" data-anchor="kids">
 			<div class="container section-kids_inner">
-				<div class="section-kids_pic icon_use">
-					<img src="./img/images/bl5-img2.png" class="section-kids_pic-item kids-product_photo">
-					<img src="./img/images/bl5-img1.png" class="section-kids_pic-item kids-product_symb">
+				<div class="section-kids_pic icon_use ">
+					<img src="./img/images/bl5-img2.png" class="section-photo hide-pic section-kids_pic-item kids-product_photo">
+					<img src="./img/images/bl5-img1.png" class="section-photo hide-pic section-kids_pic-item kids-product_symb">
 				</div>
 				<div class="section-kids_intro">
 					<h2 class="section-heading">
@@ -269,7 +269,7 @@
 			</div>
 		</section>
 		<!-- diagnostics -->
-		<section class="section  slide fullpage_section section-diagn">
+		<section class="section  slide fullpage_section section-diagn" data-anchor="diagn">
 			<div class="container section-diagn_inner">
 				<div class="section-diagn_intro">
 					<h2 class="section-heading">
@@ -281,13 +281,13 @@
 					</div>
 				</div>
 				<div class="section-diagn_pic icon_use">
-					<img src="./img/images/bl6-img.png" class="section-kids_diagn-item">
+					<img src="./img/images/bl6-img.png" class="section-photo hide-pic section-kids_diagn-item">
 				</div>
 				
 			</div>
 		</section>
 		<!-- footer-nav -->
-		<section class="section slide fullpage_section  footer-gallery">
+		<section class="section slide fullpage_section  footer-gallery" data-anchor="gallery">
 			<div class="footer-gallery_tablecell">
 				<div class="footer-gallery_item quality_one" data-quality="one">
 					<div class="footer-gallery_heading">Блог</div>
@@ -336,7 +336,7 @@
 	
 		</section>
 		<!-- footer -->
-		<footer class="main-footer slide fullpage_section ">
+		<footer class="main-footer slide fullpage_section " data-anchor="footer">
 			<div class="container main-footer_inner">
 				<nav class="main-footer_nav">
 					<ul class="main-footer_nav-wrapper">

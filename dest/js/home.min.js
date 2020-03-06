@@ -108,9 +108,13 @@ $(document).ready(function () {
             licenseKey: 'C39B3150-69A64A57-88A2443B-EDCA6358',
             autoScrolling:true,
             sectionSelector: '.fullpage_section',
-            // navigation: true,
-            // navigationPosition: 'right',
-            // menu: '#slider-nav'
+            lockAnchors:true,
+            onLeave: function(origin, destination, direction){
+                if(destination.anchor=='kids'||destination.anchor=='diagn'||destination.anchor=='choose'){
+
+                    $(destination.item).find('.section-photo').removeClass('hide-pic');
+                }
+            },
         });
 
         //methods
