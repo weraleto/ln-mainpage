@@ -1,21 +1,36 @@
 $(document).ready(function () {
 
 // block 3 gallery animation
-    if($(document).width()>=1280){
+    
+    let fullpageParams={
+        licenseKey: 'C39B3150-69A64A57-88A2443B-EDCA6358',
+        autoScrolling:true,
+        fitToSection: true,
+        sectionSelector: '.fullpage_section',
+        lockAnchors:true,
+        navigation: true,
+        navigationPosition: 'right',
+        onLeave: function(origin, destination, direction){
+            if(destination.anchor=='kids'||destination.anchor=='diagn'||destination.anchor=='choose'){
+
+                $(destination.item).find('.section-photo').removeClass('hide-pic');
+            }
+        },
+    };
+
+    if($(document).width()>1280){
         $('.section-protect_item').on('mouseover',(e)=>{
             let startWidth=$(document).width()/8;
-        $('.section-protect_item').css({'width':startWidth+'px'});
+            
+            $('.section-protect_item').css({'width':startWidth+'px'});
             $('.section-protect_item').css({'width' : startWidth-(startWidth*0.14)+'px'});
             let imgBlock=event.target.closest('.section-protect_item');
             $(imgBlock).css({'width' : startWidth+(startWidth*0.14)*7+'px'});
             $(imgBlock).find('.item-gallery_overlay').addClass('hide-overlay');
             $(imgBlock).find('.item-gallery_intro').removeClass('hide-bl');
             $(imgBlock).find('canvas').css({'opacity':'1'});
-
-
             let currId=imgBlock.id;
 
-            // $('#'+imgBlock.id+' canvas').css({'opacity':'1'});
             let canvas = $('#'+imgBlock.id+' canvas')[0].getContext('2d');
             canvas.width=100;
             canvas.height=100;
@@ -27,18 +42,18 @@ $(document).ready(function () {
             let iconAnimation=setInterval(()=>{
                 drawImage (canvasImage,frames,canvas);
                 frames++;
-                if(frames==9){clearInterval(iconAnimation)}
+                // if(frames==9){clearInterval(iconAnimation)}
             },150);
 
             
 
 
-            $(e.target).on('mouseout',()=>{
+            $([e.target).on('mouseout',()=>{
                 $('.section-protect_item').css({'width' : startWidth+'px'});
                 $('.item-gallery_overlay').removeClass('hide-overlay');
                 $('.item-gallery_intro').addClass('hide-bl');
                 $('canvas').css({'opacity':'0'});
-                clearInterval(iconAnimation);
+                // clearInterval(iconAnimation);
             })
         })
         $('.section-protect_item').on('resize',(e)=>{
@@ -56,6 +71,11 @@ $(document).ready(function () {
             img.src=img.src;
         }
 
+        $('#fullpage').fullpage(fullpageParams);
+    
+        //methods
+        $.fn.fullpage.setAllowScrolling(true);
+        fullpage_api.setFitToSection(true);
 
 
         $('.footer-gallery_item').on('mouseover',(e)=>{
@@ -103,27 +123,6 @@ $(document).ready(function () {
                 $('.footer-gallery_photo').css({'transform':'initial'});
             })
         })
-
-        $('#fullpage').fullpage({
-            licenseKey: 'C39B3150-69A64A57-88A2443B-EDCA6358',
-            autoScrolling:true,
-            sectionSelector: '.fullpage_section',
-            lockAnchors:true,
-            navigation: true,
-            navigationPosition: 'right',
-            onLeave: function(origin, destination, direction){
-                if(destination.anchor=='kids'||destination.anchor=='diagn'||destination.anchor=='choose'){
-
-                    $(destination.item).find('.section-photo').removeClass('hide-pic');
-                }
-            },
-        });
-
-        //methods
-        $.fn.fullpage.setAllowScrolling(true);
-        fullpage_api.setFitToSection(true);
-
-        
         $('.icon-up').click(()=>{
             fullpage_api.moveTo(1);
         })
@@ -141,18 +140,48 @@ $(document).ready(function () {
            appendDots: $('.footer-gallery-nav'),
            dotsClass: 'slick-dots gray'
        });
+       $('.icon-up').click(()=>{
+            $('html, body').animate({ scrollTop: 0 }, 1000);
+        })
     }
 
     $('.main_header-nav-burger').click((e)=>{
         $('.menu_wrapper').addClass('menu_show');
-        
-        $("body").css("overflow-y","hidden");
+        if($(document).width()<=1280){
+            $("body").css("overflow-y","hidden");
+        }
+       
         $('.menu_wrapper').click((e)=>{
             if($(e.target).hasClass('close-trigger')) {
                 $('.menu_wrapper').removeClass('menu_show');
-                $("body").css("overflow-y","visible");
+                if($(document).width()<1280){
+                    $("body").css("overflow-y","visible");
+                }
+               
             }
         })
+    })
+
+    $(window).resize(()=>{
+        if($(document).width()>1280){
+            $('#fullpage').fullpage(fullpageParams);
+            $('.section-protect_inner').slick('unslick');
+        }else{
+            fullpage_api.destroy('all');
+            $('.section-protect_inner').slick({
+                infinite: true,
+                arrows: false,
+                dots: true,
+                appendDots: $('.slider-protect-navigation')
+            });
+            $('.footer-gallery_tablecell').slick({
+                infinite: true,
+                arrows: false,
+                dots: true,
+                appendDots: $('.footer-gallery-nav'),
+                dotsClass: 'slick-dots gray'
+            });
+        }
     })
 });
 
