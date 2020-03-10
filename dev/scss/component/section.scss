@@ -1,7 +1,9 @@
 @import "variable";
 
-.section{
+#fullpage .section{
     height: 100vh;
+}
+.section{
     position: relative;
     overflow: hidden;
 }
@@ -72,6 +74,15 @@
     color: black;
     font-weight: 500;
     letter-spacing: 0.4px;
+}
+
+.product_cat {
+    .section-how_advantages-icon_wrapper {
+        margin-bottom: 50px;
+    }
+    .section-how_inner {
+        min-height: 335px;
+    }
 }
 
 .section-kids {
@@ -194,7 +205,9 @@
 .ref, .slider-protect-navigation {
     display: none;
 }
-
+.footer-gallery {
+    height: 100vh;
+}
 .slider-protect-navigation, .footer-gallery-nav {
     display: none;
 }
