@@ -14,7 +14,6 @@
     justify-content: space-between;
 
     font-size: 12px;
-    color: $fillGray;
 }
 .main_header-nav-left, .main_header-nav-right{
     display: flex;
@@ -26,6 +25,13 @@
 .main_header-nav-right {
     position: relative;
     top: 4px;
+}
+.main_header-nav-active-btns {
+    display: flex;
+    margin-right: $gap;
+    position: relative;
+    top: -3px;
+    font-weight: 500;
 }
 .main_header-nav-burger {
     cursor: pointer;
@@ -103,6 +109,8 @@
 .main_header-stamp{
     margin-top: 3.14%;
 }
+
+
 
 // @media all and (min-width: 320px) {
 

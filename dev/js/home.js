@@ -48,7 +48,7 @@ $(document).ready(function () {
             
 
 
-            $([e.target).on('mouseout',()=>{
+            $(e.target).on('mouseout',()=>{
                 $('.section-protect_item').css({'width' : startWidth+'px'});
                 $('.item-gallery_overlay').removeClass('hide-overlay');
                 $('.item-gallery_intro').addClass('hide-bl');
