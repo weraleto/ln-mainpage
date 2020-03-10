@@ -1,0 +1,81 @@
+.section_product-list {
+    padding: 130px 0 75px;
+    .section-heading {
+        margin-left: 86px;
+        margin-bottom: 35px;
+    }
+    .container {
+        max-width: 1230px;
+    }
+}
+
+.products {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.product {
+    list-style-type: none;
+    background-color: white;
+
+    margin-bottom: 5px;
+    
+    border-radius: 6px;
+    padding: 25px 75px 35px;
+
+    text-align: center;
+
+    transition: all .7s ease-out;
+    .price {
+        display: block;
+        font-size: 12px;
+        margin: 24px 0 20px;
+    }
+    .woocommerce-loop-product__title {
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        .product-num {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    .woocommerce-loop-product__title, .price {
+        color: black;
+    }
+    .product_buy-course, .button {
+        opacity: 0;
+        transition: opacity .5s ease-out;
+    }
+
+}
+
+
+.product:hover {
+    // transform: scale(1.01);
+    box-shadow: 0 0 16px rgba(black, .2);
+}
+.product:hover > .product_buy-course, .product:hover > .button {
+    opacity: 1;
+}
+
+
+
+.product_buy-course {
+    margin: 0 auto;
+    max-width: 158px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid black;
+    margin-bottom: 18px;
+}
+.product_buy-course-text {
+    margin-right: 3px;
+    font-size: 10px;
+}

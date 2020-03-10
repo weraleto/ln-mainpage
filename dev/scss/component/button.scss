@@ -25,6 +25,15 @@
 }
 
 
+.button {
+    @extend .btn;
+    @extend .btn-green;
+    display: inline-block;
+    color: white;
+    min-width: 99px;
+    min-height: 47px;
+    line-height: 47px;
+}
 
 
 // @media all and (min-width: 320px) {
