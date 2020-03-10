@@ -7,6 +7,9 @@
     .container {
         max-width: 1230px;
     }
+    .btn {
+        min-height: 47px;
+    }
 }
 
 .products {
@@ -78,4 +81,30 @@
 .product_buy-course-text {
     margin-right: 3px;
     font-size: 10px;
+}
+
+.section-banner {
+    width: 100%;
+    min-height: 363px;
+    background: url('./../../img/images/bl7-im3.png') no-repeat center center;
+    background-size: 100%;
+    padding: 50px 0;
+}
+.section-banner_inner {
+    display: flex;
+    min-height: 263px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    .btn-group {
+        display: flex;
+        width: 36.27%;
+    }
+    .btn {
+        flex-grow: 1;
+        flex-basis: auto;
+        min-width: initial;
+    }
+}
+.btn:not(:last-child) {
+    margin-right: 20px;
 }
