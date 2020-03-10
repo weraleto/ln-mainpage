@@ -108,3 +108,23 @@
 .btn:not(:last-child) {
     margin-right: 20px;
 }
+
+
+.section-checkout {
+    background-color: $colorMain;
+    padding: 0 $paddingH;
+}
+.section-checkout_inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    min-height: 218px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout-sum {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2.25px;
+}
