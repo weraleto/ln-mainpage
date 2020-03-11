@@ -336,6 +336,13 @@
     }    
     .product_cat .main_header-nav_wrapper {
         padding: 25px 22px 0;
+        min-height: 75px;
+    }
+    .checkout-receipt_total-sum_position {
+        font-size: 10px;
+    }
+    .checkout-receipt_total-sum {
+        font-size: 12px;
     }
 }
 
