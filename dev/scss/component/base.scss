@@ -97,10 +97,13 @@ nav a:link, nav a:hover, nav a:visited, a:active {
 }
 
 @media all and (min-width: 767px) {
-  .container {
+  #fullpage .container {
     padding: 0 28px;
     max-width: 767px;
     margin: 0 auto;
+  }
+  .container {
+    padding: 0 35px;
   }
 }
 

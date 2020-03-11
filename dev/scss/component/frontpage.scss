@@ -244,16 +244,19 @@
         position: relative;
         padding: 15px 0 20px;
     }
-    .section-how_advantages-item:not(:last-child)::after {
-        content: '';
-        height: 1px;
-        width: 120%;
-        background-color: white;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        right: 0;
-        position: absolute;
+    
+    #fullpage{
+        .section-how_advantages-item:not(:last-child)::after {
+            content: '';
+            height: 1px;
+            width: 120%;
+            background-color: white;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            right: 0;
+            position: absolute;
+        }
     }
 
     .section-how_advantages-icon {
@@ -402,7 +405,16 @@
     }
 
 
-    
+    .product_cat {
+        overflow-x: hidden;
+        .section-how_advantages-icon {
+            max-width: 123px;
+            max-height: 103px;
+        }
+        .section-how_advantages {
+            padding-left: 60px;
+        }
+    }
     
     
 }

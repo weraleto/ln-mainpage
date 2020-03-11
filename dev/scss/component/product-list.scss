@@ -112,8 +112,6 @@
     transition: all .7s ease-out;
     img {
         width: auto;
-        // max-width: 226px;
-        // max-height: 603px;
     }
     .price {
         display: block;
@@ -129,19 +127,20 @@
 }
 
 
-
-
-
 .section-banner {
     width: 100%;
-    min-height: 363px;
     background: url('./../../img/images/bl7-im3.png') no-repeat center center;
     background-size: 100%;
-    padding: 50px 0;
+    position: relative;
+    min-height: 365px;
 }
 .section-banner_inner {
     display: flex;
-    min-height: 263px;
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    right: 0;
+    left: 0;
     justify-content: flex-end;
     align-items: flex-end;
     .btn-group {
@@ -180,4 +179,128 @@
 
 .section_product-course {
     background-color: $bgGrayCurves;
+}
+
+
+@media all and (max-width: 1280px) {
+
+    .section-banner {
+        min-height: 420px;
+        background-size: cover;
+        background-position: center left;
+    }
+    .section-banner_inner {
+        top: 45px;
+        bottom: 45px;
+        .btn-group {
+            flex-direction: row;
+            max-width: 379px;
+            width: 64.27%;
+        }
+    }
+
+
+
+    .section_product-list {
+        padding: 60px 0 75px;
+        .section-heading {
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+        .btn {
+            min-height: 47px;
+        }
+    
+        .product {
+            padding: 19px 65px 25px;
+        }
+    
+        .woocommerce-loop-product__title {
+            margin-top: 20px;
+            font-size: 15px;
+            .product-num {
+                font-size: 15px;
+            }
+        }
+    
+        .product_buy-course {
+            max-width: 194px;
+            margin-bottom: 15px;
+        }
+        .product_buy-course-text {
+            margin-right: 3px;
+            font-size: 13px;
+        }
+        .price {
+            margin: 15px 0 5px;
+            font-size: 12.5px;
+        }
+    
+    }
+}
+
+@media all and (max-width: 767px) {
+
+    .section_product-list {
+        padding: 40px 0 0;
+        .section-heading {
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+        .btn {
+            line-height: 20px;
+            min-height: 20px;
+            min-width: 80px;
+        }
+    
+        .product {
+            padding: 6px 0 12px;
+            width: 50%;
+        }
+        img {
+            width: auto;
+            max-width: 75%;
+        }
+            
+        .woocommerce-loop-product__title {
+            margin-top: 0;
+            font-size: 10px;
+            .product-num {
+                font-size: 10px;
+            }
+        }
+    
+        .product_buy-course {
+            max-width: 105px;
+            margin-bottom: 15px;
+        }
+        .product_buy-course-text {
+            margin-right: 3px;
+            font-size: 8px;
+        }
+        .price {
+            margin: 0;
+            font-size: 8px;
+        }
+    
+    }
+
+    .section-banner {
+        min-height: 220px;
+    }
+    .section-banner_inner {
+        top: 20px;
+        bottom: 20px;
+    }
+
+    .section-banner_inner {
+        .btn-group {
+            max-width: 154px;
+            flex-direction: column;
+        }
+        .btn:not(:last-child) {
+            margin-right: 0;
+            margin-left: 25px;
+        }
+    }
 }
