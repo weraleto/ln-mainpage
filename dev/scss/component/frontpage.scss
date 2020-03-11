@@ -407,6 +407,9 @@
 
     .product_cat {
         overflow-x: hidden;
+        .section-heading {
+            margin-bottom: 55px;
+        }
         .section-how_advantages-icon {
             max-width: 123px;
             max-height: 103px;
@@ -520,6 +523,20 @@
 
     .section-diagn_intro .btn-group :first-child {
         margin-right: $gap;
+    }
+
+    .product_cat {
+        overflow-x: hidden;
+        .section-green {
+            padding: 60px 0 90px;
+        }
+        .section-how_advantages-icon {
+            max-width: 67px;
+            max-height: 56px;
+        }
+        .section-how_advantages {
+            padding-left: 17px;
+        }
     }
 
 }

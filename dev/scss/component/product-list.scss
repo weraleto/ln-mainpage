@@ -237,6 +237,53 @@
         }
     
     }
+
+    .section_product-course {
+        padding: 0;
+        .product {
+            width: 100%;
+            padding: 75px 0;
+        }
+        .product:first-child, .product:not(:last-child) {
+            border-right: none;
+            border-bottom: 1px solid #878787;
+        }
+
+        .products {
+            flex-direction: column;
+        }
+        .woocommerce-loop-product__title {
+            margin-top: 10px;
+        }
+        .product_buy-course {
+            margin: 0 auto;
+            max-width: 108px;
+            padding: 4px 0;
+            margin-top: 23px;
+            text-transform: uppercase;
+        }
+        .product_buy-course-text {
+            font-size: 14px;
+            color: black;
+        }
+        .price {
+            margin: 15px 0 45px;
+        }
+        .button {
+            min-width: 265px;
+        }
+    }
+    .section-checkout_inner {
+        flex-direction: column;
+        justify-content: center;
+        min-height: 241px;
+
+    }
+    .checkout-sum {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
 }
 
 @media all and (max-width: 767px) {
@@ -301,6 +348,35 @@
         .btn:not(:last-child) {
             margin-right: 0;
             margin-left: 25px;
+        }
+    }
+
+    .section_product-course {
+        .product {
+            padding: 45px 0;
+            img {
+                max-height: 382px;
+            }
+        }
+        .woocommerce-loop-product__title {
+            max-width: 175px;
+            font-size: 10px;
+        }
+        .product_buy-course {
+            margin: 0 auto;
+            max-width: 108px;
+            margin-top: 23px;
+            text-transform: uppercase;
+        }
+        .product_buy-course-text {
+            font-size: 14px;
+            color: black;
+        }
+        .price {
+            margin: 15px 0 30px;
+        }
+        .button {
+            min-width: 170px;
         }
     }
 }
