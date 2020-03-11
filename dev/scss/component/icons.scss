@@ -72,11 +72,31 @@
         height: 23px;
     }
 
+    .icon_burger{
+        width: 52px;
+        height: 19px;
+        fill: black;
+    }
+
+    .nav-toggle-list_arr-down .icon-arr_down {
+        width: 11px;
+        height: 11px;
+    }
+
 }
 
 @media all and (max-width: 767px) {
     .icon_logo{
-        width: 130px;
-        max-height: 86px;
+        width: 91px;
+        max-height: 48px;
+    }
+
+    .icon_burger{
+        width: 42px;
+        height: 13px;
+    }
+    .nav-toggle-list_arr-down .icon-arr_down {
+        width: 8px;
+        height: 8px;
     }
 }
