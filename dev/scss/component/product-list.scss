@@ -10,32 +10,25 @@
     .btn {
         min-height: 47px;
     }
-}
 
-.products {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.product {
-    list-style-type: none;
-    background-color: white;
-
-    margin-bottom: 5px;
-    
-    border-radius: 6px;
-    padding: 25px 75px 35px;
-
-    text-align: center;
-
-    transition: all .7s ease-out;
-    .price {
-        display: block;
-        font-size: 12px;
-        margin: 24px 0 20px;
+    .product {
+        background-color: white;
+        padding: 25px 75px 35px;
+        border-radius: 6px;
     }
+    .product_buy-course, .button {
+        opacity: 0;
+        transition: opacity .5s ease-out;
+    }
+    
+    .product:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 16px rgba(black, .2);
+    }
+    .product:hover > .product_buy-course, .product:hover > .button {
+        opacity: 1;
+    }
+
     .woocommerce-loop-product__title {
         margin-top: 20px;
         font-size: 14px;
@@ -47,41 +40,97 @@
             font-weight: 500;
         }
     }
+
+    .product_buy-course {
+        margin: 0 auto;
+        max-width: 158px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        padding: 4px 0;
+        border-bottom: 1px solid black;
+        margin-bottom: 18px;
+    }
+    .product_buy-course-text {
+        margin-right: 3px;
+        font-size: 10px;
+    }
+    .price {
+        margin: 24px 0 20px;
+    }
+
+}
+
+.section_product-course {
+    padding: 35px 0 50px;
+    .product {
+        width: 50%;
+    }
+    .product:first-child {
+        border-right: 1px solid #878787;
+    }
+    .woocommerce-loop-product__title {
+        margin: 0 auto;
+        font-size: 12px;
+        font-weight: 600;
+        max-width: 265px;
+        letter-spacing: .9px;
+    }
+    .product {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .product_buy-course {
+        margin: 0 auto;
+        max-width: 108px;
+        padding: 4px 0;
+        margin-top: 23px;
+        text-transform: uppercase;
+    }
+    .product_buy-course-text {
+        font-size: 14px;
+        color: black;
+    }
+    .price {
+        margin: 20px 0 30px;
+    }
+}
+
+.products {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.product {
+    list-style-type: none;
+    margin-bottom: 5px;
+    text-align: center;
+    transition: all .7s ease-out;
+    img {
+        width: auto;
+        // max-width: 226px;
+        // max-height: 603px;
+    }
+    .price {
+        display: block;
+        font-size: 12px;
+        
+    }
+    
     .woocommerce-loop-product__title, .price {
         color: black;
     }
-    .product_buy-course, .button {
-        opacity: 0;
-        transition: opacity .5s ease-out;
-    }
+    
 
 }
 
 
-.product:hover {
-    // transform: scale(1.01);
-    box-shadow: 0 0 16px rgba(black, .2);
-}
-.product:hover > .product_buy-course, .product:hover > .button {
-    opacity: 1;
-}
 
 
-
-.product_buy-course {
-    margin: 0 auto;
-    max-width: 158px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    padding: 4px 0;
-    border-bottom: 1px solid black;
-    margin-bottom: 18px;
-}
-.product_buy-course-text {
-    margin-right: 3px;
-    font-size: 10px;
-}
 
 .section-banner {
     width: 100%;
@@ -127,4 +176,8 @@
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 2.25px;
+}
+
+.section_product-course {
+    background-color: $bgGrayCurves;
 }
