@@ -4,7 +4,6 @@
     height: 100vh;
     background: url('./../../img/images/main-header.jpg') no-repeat top center;
     background-size: cover;
-    padding: $paddingV $paddingH;
  }
  .main_header-nav_wrapper{
     min-height: 29.26%;
@@ -164,7 +163,7 @@
     }
 }
 
-.category-list_item.active, .category-list_item:hover {
+.category-list_item.active {
     font-weight: 600;
     transform: initial;
     font-size: 18px;
@@ -182,9 +181,16 @@
 
 
 @media all and (max-width: 1280px) {
-    #fullpage .main_header{
-        padding: 20px 28px 40px;
-        background-position-x: 30%;
+    #fullpage {
+        .main_header{
+            // padding: 20px 28px 40px;
+            
+            background-position-x: 30%;
+            overflow: hidden;
+        }
+        .main_header-content {
+            padding-bottom: 40px;
+        }
     }
 
     .main_header-nav-active-btns, .lang-full{
@@ -219,7 +225,7 @@
     }
 
     .main_header-content {
-        height: 75.74%;
+        height: 71.74%;
     }
     .main_header-stamp{
         margin-top: 9%;
@@ -261,12 +267,12 @@
         }
     }
     
-    .category-list_item.active, .category-list_item:hover {
+    .category-list_item.active{
         font-weight: 600;
         transform: initial;
         font-size: 16px;
     }
-    .category-list_item.active::after, .category-list_item:hover::after {
+    .category-list_item.active::after {
         content: '';
         background-color: black;
         height: 1px;
@@ -282,6 +288,7 @@
     .category-list_link {
         display: flex;
         align-items: center;
+        max-width: 50%;
     }
     .product_cat .main_header-content {
         min-height: auto;
@@ -289,6 +296,9 @@
 }
 
 @media all and (max-width: 767px) {
+    .section_product-list .section-heading {
+        font-size: 16px;
+    }
     #fullpage .main_header{
         padding: 20px 0 70px;
         background-position-x: 35%;
@@ -331,7 +341,7 @@
     .category-list_item {
         font-size: 10px;
     }
-    .category-list_item.active, .category-list_item:hover {
+    .category-list_item.active{
         font-size: 11px;
     }    
     .product_cat .main_header-nav_wrapper {

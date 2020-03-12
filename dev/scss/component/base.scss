@@ -108,7 +108,7 @@ nav a:link, nav a:hover, nav a:visited, a:active {
 }
 
 @media all and (min-width: 1280px) {
-  .container {
+  .container, #fullpage .container {
     max-width: 1057px;
     margin: 0 auto;
   }

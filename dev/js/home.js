@@ -19,57 +19,32 @@ $(document).ready(function () {
     };
 
     if($(document).width()>1280){
-        $('.section-protect_item').on('mouseover',(e)=>{
-            let startWidth=$(document).width()/8;
-            
-            $('.section-protect_item').css({'width':startWidth+'px'});
-            $('.section-protect_item').css({'width' : startWidth-(startWidth*0.14)+'px'});
-            let imgBlock=event.target.closest('.section-protect_item');
-            $(imgBlock).css({'width' : startWidth+(startWidth*0.14)*7+'px'});
-            $(imgBlock).find('.item-gallery_overlay').addClass('hide-overlay');
-            $(imgBlock).find('.item-gallery_intro').removeClass('hide-bl');
-            $(imgBlock).find('canvas').css({'opacity':'1'});
-            let currId=imgBlock.id;
-
-            let canvas = $('#'+imgBlock.id+' canvas')[0].getContext('2d');
-            canvas.width=100;
-            canvas.height=100;
-            canvas.clearRect(0,0,120,100);
-
-            let canvasImage= $(imgBlock).find('img')[0];
-            let frames=1;
-
-            let iconAnimation=setInterval(()=>{
-                drawImage (canvasImage,frames,canvas);
-                frames++;
-                // if(frames==9){clearInterval(iconAnimation)}
-            },150);
-
-            
-
-
-            $(e.target).on('mouseout',()=>{
-                $('.section-protect_item').css({'width' : startWidth+'px'});
-                $('.item-gallery_overlay').removeClass('hide-overlay');
-                $('.item-gallery_intro').addClass('hide-bl');
-                $('canvas').css({'opacity':'0'});
-                // clearInterval(iconAnimation);
-            })
-        })
-        $('.section-protect_item').on('resize',(e)=>{
-            $('.section-protect_item').css({'width' : $(document).width()/8+'px'});
+        $('.hover_overlay').on('mouseover',(e)=>{
+            //захардяченный элемент
+            let id=$(e.target).closest('.section-protect_item')[0].id;
+            const elem = $('#'+id+' .ref');
+            //24 кадра в секунду
+            const intervalPart = 1000 / 24;
+            // высота одного кусочка спрайта
+            const fixedStep = 120;
+            let separateSprite = fixedStep;
+            //ложим в interval id сетИнтервала, что бы потом по этому ID удалить сетИнтервал.
+            // каждый раз в каждом интервале функции setInterval вызывается метод steps
+            let interval = setInterval( steps, intervalPart);
+            function steps() {
+                if (separateSprite >= 1020) {
+                    // у нас 9 кадров, если 9 кадров умножим на высоту кадра то получим 1020
+                    clearInterval(interval);
+                    // значит если вышло больше нужного кличества кадро - дропаем интервал
+                } else {
+                    // а пока интевал живёт, каждый такт мы показываем нужный кадр из нашего спрйта
+                    elem.css({'background-position': `0 -${separateSprite}px`});
+                    // и каждый раз добавляем к текущей высоте кадра, высоту кадра
+                    separateSprite+= fixedStep;
+                }
+            }
         });
         
-        function drawImage(img,num,canvas){
-            num=num?num-1:0;
-            img.onload = function() {
-                width = 98;
-                height = 82;
-                canvas.drawImage(img,0,834*num,834,834,12,0,98,82);
-
-            }
-            img.src=img.src;
-        }
 
         $('#fullpage').fullpage(fullpageParams);
     
@@ -149,6 +124,8 @@ $(document).ready(function () {
         $('.menu_wrapper').addClass('menu_show');
         if($(document).width()<=1280){
             $("body").css("overflow-y","hidden");
+        }else{
+            $.fn.fullpage.setAllowScrolling(false);
         }
        
         $('.menu_wrapper').click((e)=>{
@@ -156,6 +133,8 @@ $(document).ready(function () {
                 $('.menu_wrapper').removeClass('menu_show');
                 if($(document).width()<1280){
                     $("body").css("overflow-y","visible");
+                }else{
+                    $.fn.fullpage.setAllowScrolling(true);
                 }
                
             }
