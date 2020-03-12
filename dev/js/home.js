@@ -148,7 +148,8 @@ $(document).ready(function () {
 
     $('.section-protect_item').click((e)=>{
         let currTab=$(e.target).closest('.section-protect_item');
-       
+        let id=currTab.data('id');
+        $('#popup-'+id).addClass('active');
 
         setTimeout(()=>{
             $('.popup-product_wrapper').addClass('visible');
@@ -164,9 +165,9 @@ $(document).ready(function () {
 
         $('.popup_close').click((e)=>{
             $('.popup-product_wrapper').removeClass('visible');
-            
+            $('.popup-product').removeClass('active');
             if($(document).width()<=1280){
-                $("body").css("overflow-y","hidden");
+                $("body").css("overflow-y","visible");
             }else{
                 $('.section-protect_inner').removeClass('clicked');
                 currTab.removeClass('active');
