@@ -12,6 +12,10 @@
     background-color: $colorMain;
     color: #ffffff;
 }
+.section-white {
+    @extend .section-green;
+    background-color: white;
+}
 
 .section-photo {
     transition: transform 2s ease;

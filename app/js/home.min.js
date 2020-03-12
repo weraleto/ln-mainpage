@@ -154,11 +154,23 @@ $(document).ready(function () {
         setTimeout(()=>{
             $('.popup-product_wrapper').addClass('visible');
         },500)
+        if($(document).width()<=1280){
+            $("body").css("overflow-y","hidden");
+        }else{
+            $.fn.fullpage.setAllowScrolling(false);
+        }
+       
 
         $('.popup_close').click((e)=>{
             $('.popup-product_wrapper').removeClass('visible');
             $('.section-protect_inner').removeClass('clicked');
             currTab.removeClass('active');
+            if($(document).width()<=1280){
+                $("body").css("overflow-y","hidden");
+            }else{
+                $.fn.fullpage.setAllowScrolling(true);
+            }
+           
         })
     })
 

@@ -5,11 +5,10 @@
     bottom: 0;
     right: 0;
     left: 0;
-    padding-bottom: 100px;
     overflow-y: scroll;
 
-    opacity: 0;
-    z-index: -1;
+    // opacity: 0;
+    // z-index: -1;
 
     transition: all .7s ease-out;
 
@@ -23,20 +22,31 @@
         min-width: 99px;
         box-shadow: none;
     }
+    .section-how_advantages-icon {
+        fill: $colorMain;
+    }
+    .how-heading {
+        display: block;
+        font-weight: 500;
+    }
+    .section-how_advantages {
+        grid-column-gap: 6.54%;
+        margin-top: 95px;
+    }
 }
 
 .popup-product_img-overlay {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: -60px;
     bottom: 100px;
-    right: 0;
+    right: -20px;
     left: 0;
     z-index: -1;
 
     background: no-repeat right top;
     background-size: auto 100%;
 
-    opacity: 0;
+    // opacity: 0;
 
     transition: all .7s ease-out 1.7s;
 }
@@ -45,26 +55,38 @@
 
 .popup-product_content {
     max-width: 75.08%;
-    padding: 0 25px;
+    padding: 0 25px 100px;
     display: flex;
+}
+
+.popup-product_sidebar-nav_outer {
+    
+    display: flex;
+    align-items: flex-end;
+    
 }
 
 .popup-product_sidebar-nav {
     min-width: 86px;
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .popup-content_inner {
-    opacity: 0;
-    transform: translateX(-5%);
+    // opacity: 0;
+    // transform: translateX(-5%);
 
-    max-width: 81.83%;
+    max-width: 91.83%;
     padding-right: 25px;
 
     transition: all .7s ease-out .7s;
 }
 .popup-product_main-header {
-    opacity: 0;
-    transform: translateX(-5%);
+    // opacity: 0;
+    // transform: translateX(-5%);
 
     transition: all .7s ease-out .7s;
 
@@ -87,6 +109,15 @@
     letter-spacing: .825px;
     font-weight: 500;
     margin-bottom: 29px;
+}
+
+.popup-product_main-header, .popup-product_main-subheader {
+    margin-left: 86px;
+}
+
+.popup-product_main-description_outer {
+    display: flex;
+    justify-content: space-between;
 }
 .popup-product_main-description {
     display: flex;
@@ -119,6 +150,8 @@
         transform: translateX(0);
     }
 }
+
+
 
 
 
