@@ -157,7 +157,8 @@ gulp.task('html', function() {
 
 gulp.task('images', function(){
     return gulp.src([
-        './dev/img/**/*.+(png|jpg|jpeg)',
+        './dev/img/**/*.+(png|jpg|jpeg|svg)',
+        './dev/img/images/*.+(png|jpg|jpeg)',
         '!/dev/img/svg/**/*.svg'
     ])
     // Caching images that ran through imagemin

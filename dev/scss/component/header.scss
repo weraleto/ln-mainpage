@@ -2,7 +2,7 @@
 #fullpage {
  .main_header{
     height: 100vh;
-    background: url('./../../img/images/main-header.jpg') no-repeat top center;
+    background: url('../img/images/main-header.jpg') no-repeat top center;
     background-size: cover;
  }
  .main_header-nav_wrapper{
@@ -89,6 +89,7 @@
     display: flex;
     position: relative;
     max-height: 1.5em;
+    flex-direction: column;
 }
 
 .nav-toggle-list_name {
@@ -174,11 +175,11 @@
 }
 
 
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1279px) {
     #fullpage {
         .main_header{
             
-            background-position-x: 30%;
+            background-position-x: 60%;
             overflow: hidden;
         }
         .main_header-content {
@@ -186,7 +187,7 @@
         }
     }
 
-    .main_header-nav-active-btns, .lang-full{
+    .main_header-nav-contact, .lang-full{
         display: none;
     }
 
@@ -286,7 +287,7 @@
     }
     #fullpage .main_header{
         padding: 20px 0 70px;
-        background-position-x: 35%;
+        background-position-x: 64%;
         overflow-x: hidden;
     }
 

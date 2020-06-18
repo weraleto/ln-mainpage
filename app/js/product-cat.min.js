@@ -1,4 +1,92 @@
 $(document).ready(function () {
+    $('.city__current').on('click', function () {
+        $(this).hide();
+        $(this).closest('.city__container').find('.city__list').fadeIn(300);
+    });
+    $('.city__choose__list').on('click', function () {
+        $(this).addClass('active');
+        $('.city__choose__map').removeClass('active');
+        $('.listMap').fadeIn(300);
+        $('#map').hide();
+    });
+    $('.city__choose__map').on('click', function () {
+        $(this).addClass('active');
+        $('.city__choose__list').removeClass('active');
+        $('#map').fadeIn(300);
+        $('.listMap').hide();
+    });
+    $('.city').on('click', function() {
+        const currentText = $(this).text();
+        $('.city__list').fadeOut(300);
+        $('.city__current').text(currentText);
+        $('.city__current').show();
+        const dataCity = $(this).data('city');
+        $('.list__body').each(function(){
+            if(dataCity === 0) {
+                $(this).css({'display': 'flex'});
+            } else {
+                if(dataCity !== $(this).data('list-city')) {
+                    $(this).hide();
+                } else {
+                    $(this).css({'display': 'flex'});
+                }
+            }
+            
+        });
+        
+        initMap($(this).data('city'));
+    });
+    // $('.product_buy-course-list').each(function() {
+    //     const list = $(this);
+    //     $('div', this).on('click', function() {
+    //         const currentText = $(this).text();
+    //         const currentData = $(this).data('buy');
+    //         list.closest('.product_buy-course').find('.product_buy-course-text').text(currentText);
+    //         list.hide();
+    //         list.closest('.product').find('.woocommerce-loop-product__link .attachment-shop_catalog').each(function(){
+    //             if ($(this).data('period') === currentData) {
+    //                 $(this).show();
+    //             } else {
+    //                 $(this).hide();
+    //             }
+    //         });
+    //         list.closest('.product').find('.woocommerce-loop-product__link .price').each(function(){
+    //             if ($(this).data('period') === currentData) {
+    //                 $(this).show();
+    //             } else {
+    //                 $(this).hide();
+    //             }
+    //         });
+    //     });
+    // });
+
+    $('.product_buy-course-text').on('click', function () {
+        $(this).closest('.product_buy-course').find('.product_buy-course-list').show();
+    });
+    $('.product_buy-course-list').each(function() {
+        const list = $(this);
+        $('div', this).on('click', function() {
+            const currentText = $(this).text();
+            const currentData = $(this).data('buy');
+            list.closest('.product_buy-course').find('.product_buy-course-text').text(currentText);
+            list.hide();
+            list.closest('.product').find('.woocommerce-loop-product__link .attachment-shop_catalog').each(function(){
+                if ($(this).data('period') === currentData) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+            list.closest('.product').find('.woocommerce-loop-product__link .price').each(function(){
+                if ($(this).data('period') === currentData) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+    });
+    
     // block 3 gallery animation
         function transformGallery(e){
             let iden=$(e.target).closest('.footer-gallery_item').data('quality');

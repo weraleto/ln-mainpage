@@ -21,7 +21,6 @@
     transition: transform 2s ease;
 }
 
-
 .section-heading{
     letter-spacing: 2.25px;
     text-transform: uppercase;
@@ -29,6 +28,14 @@
     color: black;
     line-height: 1.5;
     font-size: 30px;
+    h3 {
+        letter-spacing: 2.25px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: black;
+        line-height: 1.5;
+        font-size: 30px;
+    }
 }
 .section-choose_inner {
     display: grid;
@@ -90,7 +97,7 @@
 }
 
 .section-kids {
-    background: url('./../../img/images/bl5-backgr.png') no-repeat center center $bgGrayCurves;
+    background: url('../img/images/bl5-backgr.png') no-repeat center center $bgGrayCurves;
     background-size: cover;
 }
 .section-kids_inner, .section-diagn_inner {
@@ -172,7 +179,7 @@
         .hide-bl {
             transform: translate(-50%,-35%);
         
-            .item-gallery_intro-num {
+            .item-gallery_intro-num, .item-gallery_intro-heading {
                 opacity: 1;
             }
         }
@@ -201,20 +208,25 @@
     position: absolute;
     z-index: 1;
     top: 50%;
-    left: 48%;
+    left: 50%;
     transform: translate(-50%,-35%);
     text-align: center;
-
     color: white;
     font-size: 24px;
     text-transform: uppercase;
-    max-width: 120px;
     opacity: 1;
-
+    width: 100%;
+    padding: 0 20px;
     transition: opacity .5s ease, transform 1s ease;
+    .item-gallery_intro-icon {
+        max-width: 120px;
+        max-height: 120px;
+        width: 120px;
+        margin: 0 auto;
+    }
 }
 
-.item-gallery_intro-num {
+.item-gallery_intro-num, .item-gallery_intro-heading {
     opacity: 1;
     transition: opacity .3s ease;
     span{
@@ -224,13 +236,14 @@
 .item-gallery_intro-heading {
     letter-spacing: 1.2px;
     font-weight: 500;
+    word-break: break-word;
     margin: 25px 0 25px;
 }
 
 .hide-bl {
     transform: translate(-50%,-45%);
 
-    .item-gallery_intro-num {
+    .item-gallery_intro-num, .item-gallery_intro-heading {
         opacity: 0;
     }
 }
@@ -251,13 +264,16 @@
 }
 
 
-@media all and (min-width: 1280px) { 
+@media all and (min-width: 1279px) { 
     .hide-pic {
         transform: translateY(200%);
     }
+    //.item-gallery_intro-heading {
+    //    min-width: 300px;
+    //}
     
 }
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1279px) {
     #fullpage .section {
         height: auto;
     }
@@ -289,14 +305,7 @@
     #fullpage{
         .section-how_advantages-item:not(:last-child)::after {
             content: '';
-            height: 1px;
-            width: 120%;
-            background-color: white;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            right: 0;
-            position: absolute;
+            display: none;
         }
     }
 
@@ -310,7 +319,7 @@
     .section-choose_photo {
         position: relative;
         min-height: initial;
-        
+        max-height: 686px;
         transform: translate(-5%,10%) scale(.9);
     }
     .section-kids, .section-diagn {
@@ -370,12 +379,12 @@
     .item-gallery_intro {
         font-size: 32.92px;
         text-align: center;
-        max-width: 170px;
+        max-width: 300px;
     }
 
     .hide-bl {
         transform: translate(-50%,-80%);
-        .item-gallery_intro-num {
+        .item-gallery_intro-num, .item-gallery_intro-heading {
             opacity: 1;
         }
     }
@@ -386,7 +395,7 @@
        overflow: hidden;
     }
     .section-protect_item .ref {
-        background-position: 0 -966px;
+        background-position: 0 -961px;
         opacity: 1;
     }
 
@@ -520,7 +529,8 @@
     .item-gallery_intro-heading {
         margin: 25px 0 5px;
     }
-    .section-choose_photo { 
+    .section-choose_photo {
+        max-width: 130%;
         width: 150%;
         text-align: center;
     }
