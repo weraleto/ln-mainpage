@@ -6,9 +6,8 @@
     min-width: 208px;
     box-shadow: 0 5px 30px $colorSecondary;
     letter-spacing: 0.6px;
-    font-size: 12px;
-    font-weight: 200;
-
+    font-size: 15px;
+    padding: 5px 20px;
     cursor: pointer;
 }
 .product_cat .btn {
@@ -18,6 +17,7 @@
 .btn-green{
     background-color: $colorMain;
     color: #ffffff;
+    font-weight: 600;
 }
 .btn-gray{
     background-color: $colorSecondary;
@@ -41,7 +41,7 @@
 }
 
 
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1279px) {
     .btn {
         min-height: 46px;
     }

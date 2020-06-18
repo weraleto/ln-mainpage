@@ -32,9 +32,12 @@
 }
 
 .icon-shoppingcart {
-    width: 13px;
-    height: 13px;
+    width: 17px;
+    height: 17px;
     fill: black;
+}
+.cart-contents {
+    font-size: 13px;
 }
 
 .icon-arr_down {
@@ -74,7 +77,7 @@
 // }
 
 
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1279px) {
     .icon_logo{
         width: 158px;
         max-height: 83px;

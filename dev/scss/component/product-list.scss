@@ -15,6 +15,9 @@
         background-color: white;
         padding: 25px 75px 35px;
         border-radius: 6px;
+        .hide {
+            display: none;
+        }
     }
     .product_buy-course, .button {
         opacity: 0;
@@ -25,7 +28,7 @@
         transform: scale(1.01);
         box-shadow: 0 0 16px rgba(black, .2);
     }
-    .product:hover > .product_buy-course, .product:hover > .button {
+    .product:hover > .product_buy-course, .product:hover .button {
         opacity: 1;
     }
 
@@ -50,10 +53,29 @@
         padding: 4px 0;
         border-bottom: 1px solid black;
         margin-bottom: 18px;
+        position: relative;
+        &-list {
+            position: absolute;
+            width: calc(100% + 50px);
+            background: #ffffff;
+            z-index: 1;
+            bottom: -1px;
+            transition: 0.4s;
+            box-shadow: 0 0 16px rgba(0,0,0,.2);
+            display: none;
+            div {
+                padding: 20px 0;
+                cursor: pointer;
+            }
+        }
+        &-week {
+            border-bottom: 1px solid rgba(0,0,0,.2);
+        }
     }
     .product_buy-course-text {
         margin-right: 3px;
         font-size: 10px;
+        cursor: pointer;
     }
     .price {
         margin: 24px 0 20px;
@@ -75,6 +97,7 @@
         font-weight: 600;
         max-width: 265px;
         letter-spacing: .9px;
+        text-transform: capitalize;
     }
     .product {
         display: flex;
@@ -111,6 +134,8 @@
     text-align: center;
     transition: all .7s ease-out;
     img {
+        max-width: 300px;
+        max-height: 400px;
         width: auto;
     }
     .price {
@@ -129,7 +154,7 @@
 
 .section-banner {
     width: 100%;
-    background: url('./../../img/images/bl7-im3.png') no-repeat center center;
+    background: url('../img/images/bl7-im3.png') no-repeat center center;
     background-size: 100%;
     position: relative;
     min-height: 365px;
@@ -163,7 +188,7 @@
     padding: 0 $paddingH;
 }
 .section-checkout_inner {
-    max-width: 1280px;
+    max-width: 1279px;
     margin: 0 auto;
     display: flex;
     min-height: 218px;
@@ -271,7 +296,7 @@
 }
 
 
-@media all and (max-width: 1280px) {
+@media all and (max-width: 1279px) {
 
     .section-banner {
         min-height: 420px;
@@ -360,6 +385,7 @@
         }
         .button {
             min-width: 265px;
+            min-height: 35px;
         }
     }
 
